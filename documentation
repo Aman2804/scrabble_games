@@ -1,0 +1,6 @@
+1. Nothing as such remain from functionality perspective
+2. Nothing such like this
+3. Steps to setup this project
+  I haven't use any such gem to develop it but before run server.
+  we need to run seed file with the help of
+  rails db:seed

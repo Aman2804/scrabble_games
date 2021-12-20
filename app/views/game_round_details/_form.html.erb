@@ -1,0 +1,37 @@
+<%= form_with(model: game_round_detail, local: true) do |form| %>
+  <% if game_round_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(game_round_detail.errors.count, "error") %> prohibited this game_round_detail from being saved:</h2>
+
+      <ul>
+        <% game_round_detail.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :player1_id %>
+    <%= form.text_field :player1_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :palyer2_id %>
+    <%= form.text_field :palyer2_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :winner_id %>
+    <%= form.text_field :winner_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.number_field :status %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+<p>
+  <strong>Contact:</strong>
+  <%= @user.contact %>
+</p>
+<p>
+  <strong>Win:</strong>
+  <%= @user.get_game_details[:win] %>
+</p>
+<p>
+  <strong>Looses:</strong>
+  <%= @user.get_game_details[:loose] %>
+</p>
+<p>
+  <strong>Avg. Score:</strong>
+  <%= @user.get_game_details[:avg_score] %>
+</p>
+
+<p>
+  <strong>Highest score:</strong>
+  <%= @user.highest_score_detail[:top_score] %>
+</p>
+<p>
+  <strong>Game:</strong>
+  <%= @user.highest_score_detail[:game_name] %>
+</p>
+<p>
+  <strong>Opponent:</strong>
+  <%= @user.highest_score_detail[:opponent] %>
+</p>
+
+<%= link_to 'Users list', users_path %>

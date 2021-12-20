@@ -1,0 +1,34 @@
+<h1>DashBoard</h1>
+
+<h4>Top 10 user List</h4>
+
+<p>A leader board screen to list the members with the top 10 average scores, for those
+members who have played at least 10 matches.</p>
+<% if @users.present? %>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Avg. Score</th>
+          <th></th>
+        </tr>
+      </thead>
+      <% @users.each do |user| %>
+        <tr>
+          <td>
+            <%= user.name %>
+          </td>
+          <td>
+            <%= user.get_game_details[:avg_score] %>
+          </td>
+          <td>
+            <%= link_to 'Show', user_path(user) %>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+<% else %>
+  <h5>No user avaiable</h5>
+<% end %>
+
+<%= link_to "Users List", users_path %>
